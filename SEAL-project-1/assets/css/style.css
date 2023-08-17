@@ -1,0 +1,225 @@
+/* CSS for the header and the tabs */
+
+.header {
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  color: #0a0000;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  margin: 0 0 0 60px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover h1 {
+  transform: scale(1.05);
+}
+
+.tabs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.tabs li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.tabs a:hover {
+  color: #ffffff;
+  background-color: #0a0000;
+}
+
+
+.tabs li::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0a0000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: right;
+}
+
+.tabs li:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .tabs ul {
+    margin-top: 10px;
+  }
+}
+
+/* CSS of main body */
+body {
+  background-image: url(../images/marvel_background.jpg);
+  /* background: linear-gradient(to bottom, #000000, #FF0000); */
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(219, 129, 44, 0.2);
+}
+
+div {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-box {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], button {
+  box-sizing: border-box; 
+  height: 40px; 
+}
+
+input[type="text"] {
+  padding: 10px;
+  padding-right: 40px; /* Adjust this value based on the size of the button */
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #000000;
+  width: 300px;
+}
+
+
+
+button {
+  position: absolute;
+  right: -4px; 
+  top: 50%;
+  transform: translateY(-50%); 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #f70101;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.1)
+  
+}
+
+button:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35); 
+}
+
+/* CSS of predictive search bar */
+.result-box {
+  margin-top: 0px;
+  width: 300px; 
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.result-box ul {
+  padding: 0;
+  margin: 0;
+}
+
+.result-box ul li {
+  list-style: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+.result-box ul li:last-child {
+  border-bottom: none;
+}
+
+.result-box ul li:hover {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+#resultContainer {
+  margin-top: 20px;
+}
+
+#resultContainer, p {
+font-size: 26px;
+
+}
+
+
+img {
+height: 320px;
+width: auto;
+border-radius: 10px;
+border: 10px #002d5c solid;
+}
+
+.desc-container {
+color: #000;
+height: 200px;
+width: auto;
+background-color: #f5f5f5;
+border-radius: 10px;
+border: 10px #002d5c solid;
+}
